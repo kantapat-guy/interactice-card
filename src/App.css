@@ -1,0 +1,334 @@
+* {
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0 auto;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+  background-image: url('./assets/images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 100px;
+}
+
+.card-container {
+  margin: 0px;
+  width: fit-content;
+}
+
+.frontCard {
+  background-image: url("./assets/images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 447px;
+  height: 245px;
+  margin-bottom: 30px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.name-exp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardName, .cardExp {
+  color: white;
+  background-color: transparent;
+  border: transparent;
+  font-size: 1rem;
+}
+.cardExp {
+  text-align: end;
+}
+.cardName::placeholder, .cardExp::placeholder {
+  color: white;
+}
+
+.cardNum {
+  color: white;
+  margin-top: auto;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 2rem;
+  width: fit-content;
+  letter-spacing: 0.1rem;
+}
+.cardNum::placeholder {
+  color: white;
+}
+
+
+.allCircle {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  width: fit-content;
+}
+
+.circle1 {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: transparent;
+}
+
+.circle2 {
+  border-radius: 50%;
+  margin-left: 15px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+
+
+.backCard {
+  background-image: url("./assets/images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 447px;
+  height: 245px;
+  padding-right: 45px;
+  margin-left: 25%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+.cardCvc {
+  color: white;
+  background-color: transparent;
+  border: transparent;
+  font-size: 1rem;
+  width: 30px;
+  margin: 0px;
+}
+.cardCvc::placeholder {
+  color: white;
+}
+
+
+
+
+.form-container {
+  margin-left: 20%;
+  width: fit-content;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input:focus {
+  outline: none;
+}
+
+small {
+  margin-right: auto;
+  margin: 0px;
+  margin-bottom: 20px;
+  color: red;
+  text-align: start;
+}
+
+label {
+  display: block;
+  margin: 0px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  text-align: start;
+}
+
+.input-text1 {
+  width: 320px;
+  height: 35px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 5px;
+}
+
+.input-exp {
+  width: 70px;
+  height: 35px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 5px;
+}
+
+.input-exp2 {
+  width: 70px;
+  height: 35px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.confirm-btn {
+  background-color: #21092f;
+  border-radius: 5px;
+  color: white;
+  width: 320px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.exp, .cvc {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-cvc {
+  width: 150px;
+  height: 35px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 5px;
+}
+
+.exp-cvc-container {
+  display: flex;
+}
+
+.thank-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+}
+
+.thank-container p {
+  color: rgb(171, 171, 171);
+  margin-top: 0%;
+  margin-bottom: 40px;
+}
+
+.con-btn {
+  background-color: #21092f;
+  border-radius: 5px;
+  color: white;
+  width: 320px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 925px) {
+  html {
+    font-size: 12px;
+  }
+  .App {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body {
+    background-image: none;
+    background-image: url("./assets/images/bg-main-mobile.png");
+    background-size: contain;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+
+  .frontCard {
+    width: 380px;
+    height: auto;
+    position: absolute;
+    top: 39%;
+    left: 23%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+  .cardNum {
+    margin-top: 16%;
+    margin-bottom: 15px;
+    width: 100%;
+    letter-spacing: 0.2rem;
+  }
+  .name-exp {
+    margin: 0px;
+  }
+  .cardName, .cardExp {
+    margin: 0px;
+  }
+
+
+  .backCard {
+    width: 380px;
+    height: 245px;
+    position: absolute;
+    top: 20%;
+    right: 23%;
+  }
+  .cardCvc {
+    position: absolute;
+    top: 38.5%;
+  }
+  
+  .form-container, .thank-container {
+    margin: 0%;
+    margin-top: calc(100vw/2.25);
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .frontCard {
+    top: 25%;
+    left: 3%;
+  }
+
+  .backCard {
+    top: 5%;
+    right: 3%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  html {
+    font-size: 10px;
+  }
+
+  .frontCard {
+    top: 18%;
+    width: 75%;
+    padding: 16px;
+    height: fit-content;
+  }
+  .cardNum {
+    letter-spacing: 0.1rem;
+  }
+
+  .backCard {
+    width: 75%;
+    height: 245px;
+    padding-right: 25px;
+  }
+  .cardCvc {
+    top: 27%;
+  }
+}
