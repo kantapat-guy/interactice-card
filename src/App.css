@@ -331,4 +331,7 @@ label {
   .cardCvc {
     top: 27%;
   }
+  .cardExp {
+    width: 50%;
+  }
 }
